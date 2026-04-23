@@ -1,9 +1,0 @@
-@use "../abstracts/mixins" as mx;
-
-.flow {
-  @each $size in xs, sm, md, lg, xl, 2xl {
-    &-#{$size} {
-      @include mx.flow($size);
-    }
-  }
-}
