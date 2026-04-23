@@ -1,0 +1,11 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/token" as t;
+@use "../abstracts/mixins" as mx;
+
+/* prettier-ignore */
+.container {
+  max-width: f.get-token(t.$containers, wide);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--ds-space-fluid-sm);
+}

@@ -1,0 +1,64 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/token" as t;
+
+$primary: f.get-token(t.$colors, primary, 500);
+$primary-subtle: f.get-token(t.$colors, primary, 100);
+
+/* prettier-ignore */
+:root {
+  // Brand 
+  --clr-brand: #{$primary};
+  --clr-brand-subtle: #{$primary-subtle};
+  --clr-brand-rgb: #{f.to-rgb($primary)};
+  --clr-brand-subtle-rgb: #{f.to-rgb($primary-subtle)};
+
+  // Text
+  --clr-text-heading: #{f.get-token(t.$colors, neutrals, 800)};      
+  --clr-text-body: #{f.get-token(t.$colors, neutrals, 700)};          
+  --clr-text-subtle: #{f.get-token(t.$colors, neutrals, 600)};        
+  --clr-text-placeholder: #{f.get-token(t.$colors, neutrals, 400)};   
+  --clr-text-on-brand: #{f.get-token(t.$colors, neutrals, 0)};        
+  --clr-text-on-brand-subtle: #{f.get-token(t.$colors, primary, 700)};
+
+  // Backgrounds
+  --clr-bg-base: #{f.get-token(t.$colors, neutrals, 50)};            
+  --clr-bg-surface: #{f.get-token(t.$colors, neutrals, 0)};           
+  --clr-bg-subtle: #{f.get-token(t.$colors, neutrals, 100)};      
+
+  // Separators
+--clr-divider-subtle: #{f.get-token(t.$colors, neutrals, 100)};   
+--clr-divider-default: #{f.get-token(t.$colors, neutrals, 200)};  
+--clr-divider-strong: #{f.get-token(t.$colors, neutrals, 300)};   
+
+// Links
+--clr-link: var(--clr-brand);
+--clr-link-hover: #{f.get-token(t.$colors, primary, 600)};
+--clr-link-visited: #{f.get-token(t.$colors, primary, 700)};
+--clr-link-subtle: #{f.get-token(t.$colors, neutrals, 500)};
+--clr-link-neutral: #{f.get-token(t.$colors, neutrals, 800)};
+
+// Icons
+--clr-icon: #{f.get-token(t.$colors, neutrals, 600)};
+--clr-icon-subtle: #{f.get-token(t.$colors, neutrals, 400)};
+--clr-icon-strong: #{f.get-token(t.$colors, neutrals, 700)};
+--clr-icon-brand: var(--clr-brand);
+--clr-icon-on-brand: var(--clr-text-on-brand);
+--clr-icon-brand-subtle: var(--clr-brand-subtle);
+--clr-icon-on-brand-subtle: var(--clr-text-on-brand-subtle);
+
+// Semantics
+--clr-info: #{f.get-token(t.$colors, semantics, info, base)};
+--clr-info-subtle: #{f.get-token(t.$colors, semantics, info, subtle)};
+
+--clr-success: #{f.get-token(t.$colors, semantics, success, base)};
+--clr-success-subtle: #{f.get-token(t.$colors, semantics, success, subtle)};
+
+--clr-accent: #{f.get-token(t.$colors, semantics, accent, base)};
+--clr-accent-subtle: #{f.get-token(t.$colors, semantics, accent, subtle)};
+
+--clr-warning: #{f.get-token(t.$colors, semantics, warning, base)};
+--clr-warning-subtle: #{f.get-token(t.$colors, semantics, warning, subtle)};
+}
+
+[data-theme="dark"] {
+}

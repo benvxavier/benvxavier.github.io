@@ -1,0 +1,101 @@
+@use "../abstracts/functions" as f;
+@use "../abstracts/token" as t;
+@use "../abstracts/mixins" as mx;
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  word-break: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: var(--clr-text-body);
+}
+code {
+  font-family: var(--font-code);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--clr-text-heading);
+}
+
+h1 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-medium);
+}
+
+h3 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-medium);
+}
+
+h4 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-medium);
+}
+
+p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-0);
+}
+
+small,
+.text-caption {
+  font-weight: var(--fw-regular);
+  color: var(--clr-text-subtle);
+  font-size: var(--fs--1);
+}
+
+strong {
+  font-weight: var(--fw-medium);
+}
+
+.display-1 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-6);
+}
+
+.display-2 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-5);
+}
+
+.title-1 {
+  font-size: var(--fs-4);
+}
+
+.title-2 {
+  font-size: var(--fs-3);
+}
+
+.section-title {
+  font-size: var(--fs-2);
+}
+
+.headline {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-regular);
+}
+
+.card-title {
+  font-size: var(--fs-0);
+}
+
+.card-subtitle {
+  font-size: var(--fs--1);
+  color: var(--clr-text-subtle);
+}
+
+.card-tag {
+  font-size: var(--fs--3);
+}

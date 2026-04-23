@@ -1,0 +1,164 @@
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/functions" as f;
+@use "../abstracts/token" as t;
+
+// Hero
+//
+.hero {
+  background: var(--clr-bg-base);
+  &__container {
+    padding-block: var(--ds-space-fluid-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mx.mq-down(compact) {
+      gap: var(--ds-space-fluid-lg);
+    }
+
+    @include mx.mq-up(compact) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__brand {
+    color: var(--clr-brand);
+    @include mx.fluid(font-size, 2rem, 3.25rem);
+  }
+
+  &__subtitle {
+    font-size: var(--fs-1);
+    color: var(--clr-text-subtle);
+    font-weight: var(--fw-medium);
+  }
+
+  &__buttons {
+    padding-top: var(--ds-space-md);
+    @include mx.mq-up(compact) {
+      @include mx.cluster(md);
+    }
+
+    .btn {
+    }
+  }
+
+  &__wrapper-image {
+    @include mx.mq-down(compact) {
+      @include mx.full-width;
+    }
+
+    @include mx.mq-up(compact) {
+      width: 52%;
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0 0 50% 50%; // reto em cima, circular em baixo
+    }
+  }
+}
+
+// Articles
+//
+.articles {
+  background: var(--clr-bg-surface);
+}
+
+.articles-card .card {
+  @include mx.hover-elevation(4);
+}
+
+.articles-card .card-footer {
+  border-top: none;
+}
+
+// Projects
+//
+.projects {
+  background: var(--clr-bg-base);
+}
+
+.projects-card .card {
+  @include mx.hover-elevation(4);
+}
+
+.projects-card .card-footer {
+  @include mx.cluster(sm, nowrap);
+}
+
+// How can I help
+//
+
+.how-can-i-help {
+  background: var(--clr-bg-surface);
+}
+
+.how-can-i-help.card-footer {
+  @include mx.cluster(xs);
+}
+
+.card-backend .card-img-top-icon {
+  background: var(--clr-info-subtle);
+  color: var(--clr-info);
+}
+
+.card-frontend .card-img-top-icon {
+  background: var(--clr-success-subtle);
+  color: var(--clr-success);
+}
+
+.card-docs .card-img-top-icon {
+  background: var(--clr-accent-subtle);
+  color: var(--clr-accent);
+}
+
+.card-consult .card-img-top-icon {
+  background: var(--clr-warning-subtle);
+  color: var(--clr-warning);
+}
+
+.card-footer .card-tag {
+  background: var(--clr-bg-surface);
+  color: var(--clr-text-subtle);
+  border: 1px solid var(--clr-divider-default);
+
+  padding: var(--ds-space-3xs) var(--ds-space-2xs);
+  border-radius: var(--radius-sm);
+}
+
+// Depoiments
+//
+
+.depoiments {
+  background: var(--clr-bg-base);
+}
+
+// Footer
+//
+.footer {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__divider {
+    margin-block: var(--ds-space-2xl);
+    background: var(--clr-divider-strong);
+  }
+
+  &__social-link {
+    color: var(--clr-icon-strong);
+
+    &:hover {
+      color: var(--clr-icon-strong);
+    }
+  }
+  &__social-icon {
+    font-size: 1.5rem;
+  }
+}

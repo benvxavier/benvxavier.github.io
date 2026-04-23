@@ -1,0 +1,157 @@
+@use "functions" as f;
+
+// ==============================
+// Design Tokens
+// ==============================
+
+$font-families: (
+  body:
+    "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+  code: "Source Code Pro, Monaco, Consolas, 'Courier New', monospace",
+  heading: "'Syne', Cambria, Georgia, Arial, serif",
+);
+
+$font-weights: (
+  bold: 700,
+  medium: 600,
+  regular: 400,
+  light: 300,
+);
+
+$font-sizes: (
+  sm: 15px,
+  md: 16px,
+  lg: 18px,
+);
+
+// @see https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
+$type-scale-ratios: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+);
+
+$mobile-scale: (
+  size: f.get-token($font-sizes, md),
+  ratio: f.get-token($type-scale-ratios, minor-second),
+);
+
+$desktop-scale: (
+  size: f.get-token($font-sizes, md),
+  ratio: f.get-token($type-scale-ratios, major-second),
+);
+
+$prose-widths: (
+  sm: 55ch,
+  md: 65ch,
+  lg: 75ch,
+);
+
+$colors: (
+  neutrals: (
+    0: #ffffff,
+    50: #f4f6fa,
+    100: #e9edf5,
+    200: #dde3ee,
+    300: #c7cfdb,
+    400: #9aa6b2,
+    500: #67727e,
+    600: #4a5563,
+    700: #2f3947,
+    800: #1e2733,
+    900: #0f1520,
+  ),
+
+  primary: (
+    50: #eef3ff,
+    100: #dbe6ff,
+    200: #b8ccff,
+    300: #8fb0ff,
+    400: #6694ff,
+    500: #2563eb,
+    600: #1e4fd1,
+    700: #193fb0,
+  ),
+
+  semantics: (
+    info: (
+      base: #185fa5,
+      subtle: #dbeafe,
+    ),
+
+    success: (
+      base: #0f6e56,
+      subtle: #d1fae5,
+    ),
+
+    accent: (
+      base: #534ab7,
+      subtle: #ede9fe,
+    ),
+
+    warning: (
+      base: #854f0b,
+      subtle: #fef3c7,
+    ),
+  ),
+);
+
+// Breakpoints de layout (baseados no conteúdo, não em dispositivos)
+$breakpoints: (
+  compact: 640px,
+  medium: 940px,
+  expanded: 1200px,
+  wide: 1600px,
+);
+
+$viewport-range: (
+  min: 320px,
+  max: 1440px,
+);
+
+/* prettier-ignore */
+$spacings: (
+  5xl: 5rem,    // 80px
+  4xl: 4rem,    // 64px
+  3xl: 3.5rem,  // 56px
+  2xl: 3rem,    // 48px
+  xl:  2rem,    // 32px
+  lg:  1.5rem,  // 24px
+  md:  1rem,    // 16px
+  sm:  0.75rem, // 12px
+  xs:  0.5rem,  // 8px
+  2xs: 0.25rem, // 4px
+  3xs: 0.125rem // 2px
+);
+
+$fluid-spacings-steps: (
+  sm: md,
+  md: lg,
+  lg: xl,
+);
+
+$containers: (
+  layout: 1200px,
+  wide: 1320px,
+  full: 1440px,
+);
+
+$elevations: (
+  1: 0 2px 8px rgba(0, 0, 0, 0.06),
+  2: 0 4px 16px rgba(0, 0, 0, 0.08),
+  3: 0 8px 24px rgba(0, 0, 0, 0.1),
+  4: 0 8px 32px rgba(0, 0, 0, 0.12),
+);
+
+$radii: (
+  none: 0px,
+  sm: 4px,
+  md: 8px,
+  lg: 12px,
+  xl: 16px,
+  2xl: 24px,
+  full: 9999px, // ← para tags, badges, pills
+);

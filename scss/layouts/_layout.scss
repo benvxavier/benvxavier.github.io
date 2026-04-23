@@ -1,0 +1,24 @@
+.app-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-fluid-md);
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
