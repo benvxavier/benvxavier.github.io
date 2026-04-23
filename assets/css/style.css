@@ -23444,7 +23444,8 @@ a:hover {
   background: var(--clr-bg-surface);
 }
 
-.how-can-i-help.card-footer {
+.how-can-i-help .card-footer {
+  border-top: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23473,7 +23474,7 @@ a:hover {
 }
 
 .card-footer .card-tag {
-  background: var(--clr-bg-surface);
+  background: var(--clr-bg-subtle);
   color: var(--clr-text-subtle);
   border: 1px solid var(--clr-divider-default);
   padding: var(--ds-space-3xs) var(--ds-space-2xs);
