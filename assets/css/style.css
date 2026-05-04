@@ -12010,6 +12010,7 @@ textarea.form-control-lg {
 }
 
 .card .card-img-top {
+  width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: center top;
@@ -23476,7 +23477,6 @@ a:hover {
 .card-footer .card-tag {
   background: var(--clr-bg-subtle);
   color: var(--clr-text-subtle);
-  border: 1px solid var(--clr-divider-default);
   padding: var(--ds-space-3xs) var(--ds-space-2xs);
   border-radius: var(--radius-sm);
 }
